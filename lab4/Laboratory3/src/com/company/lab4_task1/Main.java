@@ -19,7 +19,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<String> l = readFileInList("C:\\Users\\User\\Desktop\\expresion.txt");
+        List<String> l = readFileInList("C:\\Users\\User\\git-test\\lab4\\Laboratory3\\src\\com\\company\\expression.txt");
 
             for(String obj : l) {
                 System.out.print(obj+" - ");
