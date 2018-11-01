@@ -20,8 +20,18 @@ public class Main {
             i++;
         }
 
+        //get type of object with the biggest Volume and Shape
+        String name1="",name2="";
+
+        for(GeometricBody shape:shapes){
+            if(shape.getVolume()==GeometricBodyController.getBiggestVolume(shapes)) {
+                name1=shape.getName();
+                if(shape.getSurface()==GeometricBodyController.getBiggestSurface(shapes))
+                        name2=shape.getName();
+            }
+        }
         //get the biggest Volume and Surface
-        System.out.println(GeometricBodyController.getBiggestVolume(shapes));
-        System.out.println(GeometricBodyController.getBiggestSurface(shapes));
+        System.out.println("The biggest volume has "+name1+":"+GeometricBodyController.getBiggestVolume(shapes));
+        System.out.println("The biggest surface has "+name2+":"+GeometricBodyController.getBiggestSurface(shapes));
     }
 }
